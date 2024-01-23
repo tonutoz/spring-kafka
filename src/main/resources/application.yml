@@ -5,12 +5,12 @@ spring:
       bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
       group-id: group-id-oing
       auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.JsonDeserializer
+      #key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #value-deserializer: org.apache.kafka.common.serialization.JsonDeserializer
     producer:
       bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.JsonDeserializer
+      #key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      #value-serializer: org.apache.kafka.common.serialization.JsonDeserializer
       # JSON 데이터 JsonDeserializer
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -31,5 +31,5 @@ spring:
 logging:
   config: classpath:logback-spring.xml
 server:
-  port: 8090
+  port: 8088
 
